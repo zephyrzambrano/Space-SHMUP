@@ -6,7 +6,7 @@ public class Shield : MonoBehaviour {
     [Header("Set in Inspector")]
     public float rotationsPerSecond = 0 / 1f;
 
-    [Header("Set Dynamically"]
+    [Header("Set Dynamically")]
     public int levelShown = 0;
 
     //this non-public variable will not appear in the Inspector
@@ -14,7 +14,7 @@ public class Shield : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mat = GetComponent<Renderer>.material;
+        mat = GetComponent<Renderer>().material;
 	}
 	
 	// Update is called once per frame
