@@ -10,6 +10,7 @@ public class Main : MonoBehaviour {
     public GameObject[] prefabEnemies; //array of Enemy prefabs
     public float enemySpawnPerSecond = 0.5f; //number of Enemies/second
     public float enemyDefaultPadding = 1.5f; //padding for position
+    public WeaponDefinition[] weaponDefinitions;
 
     private BoundsCheck bndCheck;
 
