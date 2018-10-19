@@ -10,6 +10,7 @@ public class Hero : MonoBehaviour {
 	public float speed=30;
 	public float rollMult=-45;
 	public float pitchMult=30;
+    public float gameRestartDelay = 2f;
 	
 	[Header("Set Dynamically")]
     [SerializeField]
@@ -71,6 +72,8 @@ public class Hero : MonoBehaviour {
             //if the shield is going to be set to less than zero
             if (value<0) {
                 Destroy(this.gameObject);
+                //tell Main.S to restart the game after a delay
+                Main.S.DelayedRestart(gameRestartDelay);
             }
         }
     }

@@ -44,10 +44,15 @@ public class Main : MonoBehaviour {
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
+    public void DelayedRestart (float delay) {
+        //Invoke the Restart() method in delay seconds
+        Invoke("Restart", delay);
+    }
+
+    public void Restart() {
+        //reload _Scene_0 to restart the game
+        SceneManager.LoadScene("_Scene_0");
+    }
 	
 	// Update is called once per frame
 	void Update () {
