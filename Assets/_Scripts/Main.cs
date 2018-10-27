@@ -80,6 +80,6 @@ public class Main : MonoBehaviour {
         }
         // This returns a new WeaponDefinition with a type of WeaponType.none,
         // which means it has failed to find the right WeaponDefinition
-        return (new WeaponDefinition);
+        return (new WeaponDefinition());
     }
 }
