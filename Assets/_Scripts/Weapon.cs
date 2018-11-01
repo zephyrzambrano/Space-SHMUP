@@ -62,7 +62,7 @@ public class Weapon : MonoBehaviour {
             GameObject go = new GameObject("_ProjectileAnchor");
             PROJECTILE_ANCHOR = go.transform;
         }
-        // find the fireDelegate of the root GameObject
+        // Find the fireDelegate of the root GameObject
         GameObject rootGO = transform.root.gameObject;
         if (rootGO.GetComponent<Hero>() != null) {
             rootGO.GetComponent<Hero>().fireDelegate += Fire;
@@ -92,7 +92,7 @@ public class Weapon : MonoBehaviour {
         // If this.gameObject is inactive, return
         if (!gameObject.activeInHierarchy) return;
         // If it hasn't been enough time between shots, return
-        if (Time.time-lastShotTime<def.delayBetweenShots) {
+        if (Time.time - lastShotTime < def.delayBetweenShots) {
             return;
         }
         Projectile p;
