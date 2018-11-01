@@ -29,7 +29,7 @@ public class Hero : MonoBehaviour {
 		if (S==null) {
 			S=this; //set the Singleton
 		}
-        fireDelegate += TempFire;
+        // fireDelegate += TempFire;
 	}
 	
 	// Update is called once per frame
@@ -60,7 +60,7 @@ public class Hero : MonoBehaviour {
         }
 	}
 
-    void TempFire() {
+    /* void TempFire() {
         GameObject projGO = Instantiate<GameObject>(projectilePrefab);
         projGO.transform.position = transform.position;
         Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
@@ -70,7 +70,7 @@ public class Hero : MonoBehaviour {
         proj.type = WeaponType.blaster;
         float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
         rigidB.velocity = Vector3.up * tSpeed;
-    }
+    } */
 
     void OnTriggerEnter(Collider other) {
         Transform rootT = other.gameObject.transform.root;
