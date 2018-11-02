@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour {
         materials = Utils.GetAllMaterials(gameObject);
         originalColors = new Color[materials.Length];
         for (int i=0; i<materials.Length; i++) {
-            originalColors[i] = Material[i].color;
+            originalColors[i] = materials[i].color;
         }
     }
     //this is a Property: a method that acts like a field
