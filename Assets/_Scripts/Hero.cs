@@ -26,11 +26,15 @@ public class Hero : MonoBehaviour {
     // Create a WeaponFireDelegate field named fireDelegate
     public WeaponFireDelegate fireDelegate;
 	
-	void Awake() {
+	void Start() {
 		if (S==null) {
 			S=this; //set the Singleton
 		}
         // fireDelegate += TempFire;
+
+        // Reset the weapons to start _hero with 1 blaster
+        ClearWeapons();
+        weapons[0].SetType(WeaponType.blaster);
 	}
 	
 	// Update is called once per frame
