@@ -36,11 +36,15 @@ public class Enemy_4 : Enemy {
     }
 
     public override void Move() {
-        // 
-    }
+        // This completely overrides Enemy.Move() with a linear interpolation
+        float u = (Time.time - timeStart) / duration;
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+        if (u >= 1) {
+            InitMovement();
+            u = 0;
+        }
+
+        u = 1 - Mathf.Pow(1 - u, 2); // Apply Ease Out easing to u
+        pos = (1 - u) * p0 + u * p1; // Simple linear interpolation
+    }
 }
